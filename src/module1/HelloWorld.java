@@ -36,14 +36,14 @@ public class HelloWorld extends PApplet
 	UnfoldingMap map2;
 
 	public void setup() {
-		size(800, 600, P2D);  // Set up the Applet window to be 800x600
+		size(900, 600, P2D);  // Set up the Applet window to be 800x600
 		                      // The OPENGL argument indicates to use the 
 		                      // Processing library's 2D drawing
 		                      // You'll learn more about processing in Module 3
 
 		// This sets the background color for the Applet.  
 		// Play around with these numbers and see what happens!
-		this.background(200, 200, 200);
+		this.background(100, 100, 100);
 		
 		// Select a map provider
 		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
@@ -76,7 +76,15 @@ public class HelloWorld extends PApplet
 		
 		// TODO: Add code here that creates map2 
 		// Then you'll modify draw() below
-
+	    
+		map2 = new UnfoldingMap(this, 450, 50, 350, 500, provider);
+		zoomLevel = 14;
+		map2.zoomAndPanTo(zoomLevel, new Location(32.8400f, -117.2769f));
+		MapUtils.createDefaultEventDispatcher(this, map2);
+		
+		/*map2 = new UnfoldingMap(this, 50, 50, 350, 500, provider);
+		map2.zoomAndPanTo(zoomLevel, new Location(32.8f, -117.2f));
+	    MapUtils.createDefaultEventDispatcher(this, map2);*/
 	}
 
 	/** Draw the Applet window.  */
@@ -84,6 +92,7 @@ public class HelloWorld extends PApplet
 		// So far we only draw map1...
 		// TODO: Add code so that both maps are displayed
 		map1.draw();
+		map2.draw();
 	}
 
 	
