@@ -44,7 +44,11 @@ public class HelloWorld extends PApplet
 		// This sets the background color for the Applet.  
 		// Play around with these numbers and see what happens!
 		this.background(100, 100, 100);
-		
+
+
+		System.setProperty("http.proxyHost", "webproxy.metoffice.gov.uk" );
+		System.setProperty("http.proxyPort", "8080");
+
 		// Select a map provider
 		AbstractMapProvider provider = new Google.GoogleTerrainProvider();
 		// Set a zoom level
