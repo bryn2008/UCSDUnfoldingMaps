@@ -16,6 +16,9 @@ public class HelloUCSDWorld extends PApplet {
 	public void setup() {
 		size(800, 600, OPENGL);
 
+		System.setProperty("http.proxyHost", "webproxy.metoffice.gov.uk" );
+		System.setProperty("http.proxyPort", "8080");
+
 		map = new UnfoldingMap(this, new Google.GoogleTerrainProvider());
 		map.zoomAndPanTo(14, new Location(32.881, -117.238)); // UCSD
 
