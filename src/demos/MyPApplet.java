@@ -46,7 +46,7 @@ public class MyPApplet extends PApplet{
 		
 		//System.out.println("R" + rgb[0] + " G" + rgb[1] + " B" + rgb[2]);
 		return rgb;
-	}	
+	}
 	
 	public static void main (String[] args) {
 		//Add main method for running as application

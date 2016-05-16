@@ -34,7 +34,7 @@ public class LifeExpectancy extends PApplet {
 		
 		System.setProperty("http.proxyHost", "webproxy.metoffice.gov.uk" );
 		System.setProperty("http.proxyPort", "8080");
-		
+
 		map = new UnfoldingMap(this, 50, 50, 700, 500, new Google.GoogleMapProvider());
 		MapUtils.createDefaultEventDispatcher(this, map);
 
