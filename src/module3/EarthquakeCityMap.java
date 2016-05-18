@@ -53,6 +53,9 @@ public class EarthquakeCityMap extends PApplet {
 	public void setup() {
 		size(950, 600, OPENGL);
 
+		System.setProperty("http.proxyHost", "webproxy.metoffice.gov.uk" );
+		System.setProperty("http.proxyPort", "8080");
+		
 		if (offline) {
 		    map = new UnfoldingMap(this, 200, 50, 700, 500, new MBTilesMapProvider(mbTilesString));
 		    earthquakesURL = "2.5_week.atom"; 	// Same feed, saved Aug 7, 2015, for working offline
